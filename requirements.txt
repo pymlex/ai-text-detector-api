@@ -1,7 +1,4 @@
 fastapi
-uvicorn[standard]
-gunicorn
-transformers
+uvicorn
 torch
-requests
-pyngrok
+transformers
