@@ -63,11 +63,11 @@ Response:
 !make run
 ```
 
-After execution, the notebook prints a public URL from ngrok, which you can use for `/predict`.
+After execution, the notebook prints the status of trainformer installation and the server running, along with some additional information. Most importantly, it provides a **public URL** from ngrok that you can use for the /predict endpoint.
 
 ## Client usage example
 
-Run the local client:
+Copy the URL from Colab and paste it into `client_test.py` on your local computer. Then, run the client:
 
 ```bash
 py -3.12 client_test.py
