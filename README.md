@@ -8,11 +8,13 @@ A minimal API for the Desklib text-detection model from [Hugging Face](https://h
 The project keeps functionality intentionally simple: a **FastAPI** application for routing and validation, a compact `Detector` wrapper around the Hugging Face model, and optional **ngrok** integration for external access (useful in Colab). The internal model component handles tokenisation, batching, GPU/CPU device selection and probability computation.
 
 ## Project structure
-**app/main.py** – FastAPI application, CORS, endpoints `/health`, `/info`, `/predict`, threshold logic, batch handling.  
-**app/model.py** – model wrapper: tokenizer loading, PyTorch forward pass, probability computation, batching.  
-**run_server.py** – ngrok tunnel + uvicorn server.  
-**client_test.py** – minimal usage example for making prediction requests.  
-**requirements.txt** – runtime dependencies.
+
+- **app/main.py** – FastAPI application, CORS, endpoints `/health`, `/info`, `/predict`, threshold logic, batch handling.  
+- **app/model.py** – model wrapper: tokenizer loading, PyTorch forward pass, probability computation, batching.  
+- **run_server.py** – ngrok tunnel + uvicorn server.  
+- **client_test.py** – minimal usage example for making prediction requests.  
+ - **requirements.txt** – runtime dependencies.
+ - **Makefile** - modules installation and ngrok runner. Set your `ngrok_authtoken` here.
 
 ## Request structure
 `POST /predict`  
