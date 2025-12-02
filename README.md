@@ -17,8 +17,8 @@ The project keeps functionality intentionally simple: a **FastAPI** application 
  - **Makefile** - modules installation and ngrok runner. Set your `ngrok_authtoken` here.
 
 ## Request structure
-`POST /predict`  
-JSON body:
+  
+JSON body for `POST /predict`:
 ```json
 {
   "items": [
