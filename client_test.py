@@ -1,7 +1,7 @@
 import requests
 
 
-url = "http://SERVER_IP:8000/predict"
+url = "http://34.73.170.160:8000/predict"
 
 data = {
     "id": 1,

@@ -1,9 +1,18 @@
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from app.model import Detector
 import os
 
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 
 MODEL_DIR = os.environ.get("MODEL_DIR", "desklib/ai-text-detector-v1.01")
 detector = Detector(MODEL_DIR)
