@@ -57,6 +57,8 @@ Response:
 
 ## Running in Google Colab
 
+Set your `ngrok_authtoken` in the `Makefile`. Then, you can run:
+
 ```bash
 !git clone https://github.com/pymlex/ai-text-detector-api.git
 %cd ai-text-detector-api
