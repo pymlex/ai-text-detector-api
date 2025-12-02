@@ -1,6 +1,7 @@
 import nest_asyncio
 from pyngrok import ngrok
 import uvicorn
+from app.main import app
 
 
 ngrok_tunnel = ngrok.connect(8000)
