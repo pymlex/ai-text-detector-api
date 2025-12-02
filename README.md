@@ -3,7 +3,7 @@
 
 <img width="1762" height="333" alt="image" src="https://github.com/user-attachments/assets/44d835d4-f350-4a3d-ba15-db96c813565b" />
 
-A minimal API for the Desklib text-detection model from [Hugging Face](https://huggingface.co/desklib/ai-text-detector-v1.01). The service exposes a clean `/predict` endpoint, accepts raw text or `title + text` pairs, and returns the model’s probability and boolean label based on a configurable threshold.
+A minimal API for the Desklib text-detection model from [Hugging Face](https://huggingface.co/desklib/ai-text-detector-v1.01). The service exposes a `/predict` endpoint, accepts `text` or `title + text` pairs, and returns the model’s probability and boolean label based on a configurable threshold.
 
 The project keeps functionality intentionally simple: a **FastAPI** application for routing and validation, a compact `Detector` wrapper around the Hugging Face model, and optional **ngrok** integration for external access (useful in Colab). The internal model component handles tokenisation, batching, GPU/CPU device selection and probability computation.
 
